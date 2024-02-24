@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Project1 from './Project1';
+import Project3 from './Project3';
+import Project4 from './Project4';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <h1>Project</h1>
+      <Project2 /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/1" element={<Project1 />} />
+          <Route path="/3" element={<Project3 />} />
+          <Route path="/4" element={<Project4 />} />
+          {/* <Route path="/htmlPage" element={<Page2 />} /> */}
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

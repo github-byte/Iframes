@@ -1,0 +1,27 @@
+.wrap {
+  overflow: hidden;
+  resize: both;
+  position: relative;
+}
+
+#iframeTag {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: yellow;
+  z-index: 1;
+}
+
+.pull-tab {
+  height: 0px;
+  width: 0px;
+  border-top: 15px solid red;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  transform: rotate(-45deg);
+  position: absolute;
+  bottom: 0;
+  right: -9px;
+  pointer-events: none;
+  z-index: 2;
+}

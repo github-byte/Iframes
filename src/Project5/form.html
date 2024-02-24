@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><Form></Form></title>
+  </head>
+  <body>
+    <form aria-label="Sample Form" role="form" action="" method="post">
+      <fieldset>
+        <legend>Form</legend>
+        <label for="name">Name</label><br />
+        <input
+          type="text"
+          aria-label="Name"
+          aria-required="true"
+          aria-invalid="false"
+          name="Name"
+          id="name"
+        /><br />
+        <label for="age">Age</label><br />
+        <input
+          type="number"
+          name="Age"
+          id="age"
+          aria-label="age"
+          aria-required="true"
+          aria-invalid="false"
+        /><br /><br />
+        <input
+          type="submit"
+          aria-label="Submit"
+          aria-required="true"
+          aria-invalid="false"
+          value="Submit"
+        />
+      </fieldset>
+    </form>
+  </body>
+</html>

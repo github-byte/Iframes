@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>PROJECT 2</h1>
+    <h2>Page 1</h2>
+    <iframe
+      id="childFrame"
+      src="http://127.0.0.1:5500/src/Project2/page2.html"
+      sandbox="allow-same-origin allow-scripts"
+    ></iframe>
+    <script>
+      window.onload = function () {
+        // Get the iframe element
+        var iframe = document.getElementById("childFrame");
+        const iframeWindow = iframe.contentWindow.document;
+        if (iframeWindow.readyState == "complete") {
+          var childWindow = iframe.contentWindow;
+
+          // Access the document inside the iframe
+          var childDocument = childWindow.document;
+
+          // Find the element to style
+          var elementToStyle = childDocument.getElementById("styledElement");
+
+          // Style the element
+          elementToStyle.style.color = "red";
+          elementToStyle.style.fontWeight = "bold";
+        }
+        // Wait for the iframe to load
+      };
+    </script>
+  </body>
+</html>
